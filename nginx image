@@ -1,0 +1,17 @@
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt install docker-ce
+
+docker --version 
+
+docker pull nginx
+
+docker images
+
+docker run --name mynginx -d -p 8080:80 nginx
+
+docker ps
+
+hit public ip:8080
